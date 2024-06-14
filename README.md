@@ -12,6 +12,6 @@ I have implemented the most beautiful & most upvoted Shaders ready to be used as
 - All you need to implement the shaders are their main classes.
 
 # Video of numeric order
-- here is a video of the numeric order it will show you which shader is who:
+- here is a video of the numeric order it will show you which shader is who: https://youtu.be/53EFlFMiG_w
 
  Each shader has its main class where size / repeater / growth & and many other customiseable options are handled to customise them further if you like to!
