@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Angular Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap">
+    <link rel="stylesheet" href="CSS.css">
+
+    <!-- Include AngularJS library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+<h1 class="title">{{ pageTitle }}</h1>
+<div class="menu">
+    <div class="cutout-circle">
+        <div class="animated-skin-text">Animated Skin</div>
+    </div>
+<div class="button-container">
+    <button class="gradient-button">Switch</button>
+</div>
+    <ul>
+        <li class="menu-item">
+            <div class="slider-label">Layer Slider</div>
+            <label>
+                <input type="range" id="whiteStepSlider" min="0.100" max="0.500" step="0.001" value="0.138" class="slider">
+            </label>
+        </li>
+        <li class="menu-item">
+            <div class="slider-label">Line Intensity</div>
+            <label>
+                <input type="range" id="lineIntensitySlider" min="1.0" max="8.0" step="1.0" value="2.0" class="slider">
+            </label>
+        </li>
+        <li class="menu-item">
+            <div class="slider-label">Swirl Slider</div>
+            <label>
+                <input type="range" id="distanceSlider" min="1.0" max="12.0" step="0.1" value="3.85" class="slider">
+            </label>
+        </li>
+        <li class="menu-item">
+            <div class="color-label">Background Color</div>
+            <label for="redSlider">Red:</label>
+            <input class="color-slider" id="redSlider" max="255" min="0" type="range" value="255">
+            <label for="greenSlider">Green:</label>
+            <input id="greenSlider" type="range" min="0" max="255" value="255" class="color-slider">
+            <label for="blueSlider">Blue:</label>
+            <input id="blueSlider" type="range" min="0" max="255" value="255" class="color-slider">
+        </li>
+    </ul>
+</div>
+<div class="additional-circles">
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+</div>
+<!-- Additional circles (second row) -->
+<div class="additional-secondary-circles">
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+</div>
+<!-- Additional circles (third row) -->
+<div class="additional-third-circles">
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+</div>
+<!-- Additional circles (fourth row) -->
+<div class="additional-fourth-circles">
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+</div>
+<!-- Additional circles (fifth row) -->
+<div class="additional-fifth-circles">
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+    <div class="black-circle"></div>
+</div>
+<div class="shader-container">
+    <canvas id="shaderCanvas" width="221" height="221"></canvas>
+</div>
+<!-- ShaderTwo container -->
+<div class="shader-two-container">
+    <canvas id="shaderTwoCanvas" width="180" height="180"></canvas>
+</div>
+<!-- ShaderThree container -->
+<div class="shader-three-container">
+    <canvas id="shaderThreeCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderFour container -->
+<div class="shader-four-container">
+    <canvas id="shaderFourCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderFive container -->
+<div class="shader-five-container">
+    <canvas id="shaderFiveCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderSix container -->
+<div class="shader-six-container">
+    <canvas id="shaderSixCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderSeven container -->
+<div class="shader-seven-container">
+    <canvas id="shaderSevenCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderEight container -->
+<div class="shader-eight-container">
+    <canvas id="shaderEightCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderNine container -->
+<div class="shader-nine-container">
+    <canvas id="shaderNineCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderTen container -->
+<div class="shader-ten-container">
+    <canvas id="shaderTenCanvas" width="183" height="183"></canvas>
+</div>
+<!-- ShaderEleven container -->
+<div class="shader-eleven-container">
+    <canvas id="shaderElevenCanvas" width="183" height="183"></canvas>
+</div>
+<div class="shader-thirteen-container">
+    <canvas id="shaderThirteenCanvas" width="183" height="183"></canvas>
+</div>
+<div class="shader-fourteen-container">
+    <canvas id="shaderFourteenCanvas" width="183" height="183"></canvas>
+</div>
+<div class="shader-fifteen-container">
+    <canvas id="shaderFifteenCanvas" width="183" height="183"></canvas>
+</div>
+<div class="shader-sixteen-container">
+    <canvas id="shaderSixteenCanvas" width="183" height="183"></canvas>
+</div>
+<div class="shader-seventeen-container">
+    <canvas id="shaderSeventeenCanvas" width="183" height="183"></canvas>
+</div>
+<div class="shader-eighteen-container">
+    <canvas id="shaderEighteenCanvas" width="183" height="183"></canvas>
+</div>
+
+<script type="module" src="./AngularStyles.js"></script>
+
+<script src="Angular.js"></script>
+<script src="ShaderOne.js"></script>
+<script type="module" src="ShaderTwo.js"></script>
+<script type="module" src="ShaderThree.js"></script>
+<script type="module" src="ShaderFour.js"></script>
+<script type="module" src="ShaderFive.js"></script>
+<script type="module" src="ShaderSix.js"></script>
+<script type="module" src="ShaderSeven.js"></script>
+<script type="module" src="ShaderEight.js"></script>
+<script type="module" src="ShaderNine.js"></script>
+<script type="module" src="ShaderTen.js"></script>
+<script type="module" src="ShaderEleven.js"></script>
+<script type="module" src="ShaderThirteen.js"></script>
+<script type="module" src="ShaderFourteen.js"></script>
+<script type="module" src="ShaderFifteen.js"></script>
+<script type="module" src="ShaderSixteen.js"></script>
+<script type="module" src="ShaderSeventeen.js"></script>
+<script type="module" src="ShaderEighteen.js"></script>
+
+<script type="module">
+    import ShaderTwo from './ShaderTwo.js';
+    import ShaderThree from './ShaderThree.js';
+    import ShaderThree from './ShaderFour.js';
+    import ShaderFive from './ShaderFive.js';
+    import ShaderSix from './ShaderSix.js';
+    import ShaderSeven from './ShaderSeven.js';
+    import ShaderEight from './ShaderEight.js';
+    import ShaderNine from './ShaderNine.js';
+    import ShaderTen from './ShaderTen.js';
+    import ShaderEleven from './ShaderEleven';
+    import ShaderThirteen from './ShaderThirteen';
+    import ShaderFourteen from './ShaderFourteen';
+    import ShaderFifteen from './ShaderFifteen';
+    import ShaderSixteen from './ShaderSixteen';
+    import ShaderSeventeen from './ShaderSeventeen';
+    import ShaderEighteen from './ShaderEighteen';
+
+    import { AngularStylesComponent } from './AngularStyles.js';
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var shaderTwo = new ShaderTwo();
+        var shaderThree = new ShaderThree();
+        var shaderFour = new ShaderFour();
+        var shaderFive = new ShaderFive();
+        var shaderSix = new ShaderSix();
+        var shaderSeven = new ShaderSeven();
+        var shaderEight = new ShaderSeven();
+        var shaderNine = new ShaderNine();
+        var shaderTen = new ShaderTen();
+        var shaderEleven = new ShaderEleven();
+        var shaderThirteen = new ShaderThirteen();
+        var shaderFourteen = new ShaderFourteen();
+        var shaderFifteen = new ShaderFifteen();
+        var shaderSixteen = new ShaderSixteen();
+        var shaderSeventeen = new ShaderSeventeen();
+        var shaderEighteen = new ShaderEighteen();
+        var angularStylesComponent = new AngularStylesComponent();
+
+
+        shaderTwo.init();
+        shaderThree.init();
+        shaderFour.init();
+        shaderFive.init();
+        shaderSix.init();
+        shaderSeven.init();
+        shaderEight.init();
+        shaderNine.init();
+        shaderTen.init();
+        shaderEleven.init();
+        shaderThirteen.init();
+        shaderFourteen.init();
+        shaderFifteen.init();
+        shaderSixteen.init();
+        shaderSeventeen.init();
+        shaderEighteen.init();
+    });
+</script>
+</body>
+</html>
